@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Examination System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container" id="login-section">
+    <h2>Student Login</h2>
+    <input type="text" id="username" placeholder="Enter Username" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div class="container hidden" id="instruction-section">
+    <h2>Exam Instructions</h2>
+    <ul>
+      <li>There are 5 questions.</li>
+      <li>Each question carries 1 mark.</li>
+      <li>There is no negative marking.</li>
+    </ul>
+    <button onclick="startExam()">Start Exam</button>
+  </div>
+
+  <div class="container hidden" id="exam-section">
+    <h2 id="question"></h2>
+    <ul id="options"></ul>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div class="container hidden" id="result-section">
+    <h2>Exam Completed!</h2>
+    <p id="score"></p>
+    <button onclick="restartExam()">Restart</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
